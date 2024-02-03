@@ -5,12 +5,10 @@ const Menu = require("./models/Menu")
 mongoose
 .connect('mongodb+srv://abdulrahman:abdulrahmanmohammed20@bistrobliss.xpyhz2h.mongodb.net/?retryWrites=true&w=majority')
 .then(()=> console.log("connected suc"))
-.catch(e=>console.log("error with data base"))
+.catch(e=>console.log("error with data base" , e))
 
+// 
 app.use(express.json())
-
-// mongodb+srv://abdulrahman:<password>@bistrobliss.xpyhz2h.mongodb.net/?retryWrites=true&w=majority
-
 app.get("/",(req,res)=>{
     res.send("hellow")
 })
